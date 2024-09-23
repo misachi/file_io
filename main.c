@@ -30,7 +30,7 @@ typedef struct func_args
 
 static int write_file(void *arg) {
     func_args *args = (func_args *)arg;
-    memset(args->buf, args->write_val, 1000);
+    memset(args->buf, args->write_val, 2048);
     for (size_t i = 0; i < NUM_LOOPS; i++)
     {
         write(args->fd, args->buf, args->len);
@@ -81,6 +81,7 @@ int main(int argc, char *argv[]) {
 
     end = clock();
     cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+    close(fd);
     printf("Time Taken: %f seconds\n", cpu_time_used);
     exit(EXIT_SUCCESS);
 }

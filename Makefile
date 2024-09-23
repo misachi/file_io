@@ -6,7 +6,7 @@ CURR_DIR := $(shell pwd)
 
 all:
 	@mkdir -p $(OUT_DIR)
-	@rm -f $(OUT_DIR)/stalls.txt && touch $(OUT_DIR)/stalls.txt
+	# @rm -f $(OUT_DIR)/stalls.txt && touch $(OUT_DIR)/stalls.txt
 	$(CC) -g main.c -o $(OUT_FILE)
 	$(OUT_FILE)
 
