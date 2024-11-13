@@ -5,7 +5,7 @@ This is demo'd by having two threads, one is writing to a file while another is 
 
 This was tested on an Ubuntu jammy VM with Linux v5.15.0-121-generic.
 
-I could not replicate the same on a machine installed with Linux v6.5.0-45-generic.
+For page aligned test, turn on `#define IS_ALIGNED_PAGE 1`. Turn off `#define IS_ALIGNED_PAGE 0` for unaligned page test.
 
 Unaligned page write size 1024
 ![Demo](assets/unaligned_write.png)
