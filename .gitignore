@@ -54,3 +54,6 @@ dkms.conf
 *.data
 *.old
 out
+.tmp
+
+.vscode
